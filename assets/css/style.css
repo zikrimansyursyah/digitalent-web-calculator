@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-gray: #EFEFEF;
+  --bg-light: #FFFFFF;
+  --bg-dark: #22252D;
+  --body-number-light: #fafafa;
+  --body-number-dark: #2A2D37;
+  --bg-btn-light: #F7F7F7;
+  --bg-btn-dark: #282B33;
+  --btn-green: #58D0BF;
+  --btn-red: #D46F71;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  background: var(--bg-gray);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+}
+
+.calculator {
+  height: 80vh;
+  background-color: var(--bg-light);
+  box-shadow: 0px 0px 10px -7px rgba(0,0,0,0.1);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.calculator-pad {
+  background-color: var(--body-number-light);
+  position: relative;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 14px;
+  grid-row-gap: 14px;
+  border-radius: 30px 30px 0 0;
+}
+
+.btn {
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--bg-btn-light);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.btn:is(:hover, :focus) {
+  background-color: #dedede;
+}
+
+.text-green {
+  color: var(--btn-green);
+}
+
+.text-red {
+  color: var(--btn-red);
+}
+
+hr.footer {
+  width: 40%;
+  position: absolute;
+  bottom: 1rem;
+  right: 50%;
+  transform: translateX(50%);
+  border: 1px solid #dedede;
+}
+
+input {
+  border: none;
+  width: fit-content;
+  padding: 0 2rem;
+  outline: none;
+  text-align: right;
+}
+
+.input-second {
+  margin: 1rem 0 2rem 0;
+  font-weight: 700;
+  font-size: 44px;
+  max-width: 20rem;
+}
+
+.input-first {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.created-by {
+  position: absolute;
+  top: 3%;
+  right: 50%;
+  transform: translateX(50%);
+  font-weight: 300;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+@media (max-height: 800px) {
+  .calculator {
+    height: 95vh;
+  }
+}
