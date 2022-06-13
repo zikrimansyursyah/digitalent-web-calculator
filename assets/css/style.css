@@ -63,7 +63,7 @@
   font-size: 18px;
 }
 
-.btn:is(:hover, :focus) {
+.btn:hover {
   background-color: #dedede;
 }
 
